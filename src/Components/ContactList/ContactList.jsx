@@ -19,8 +19,7 @@ function ContactList() {
       <ul className="list">
         {contacts.map(({ id, name, number }) => (
           <li key={id} className="listItem">
-            {name}: {number}
-            <ButtonDelete id={id} />
+            {name}: {number} <ButtonDelete id={id} />
           </li>
         ))}
       </ul>

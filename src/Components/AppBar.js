@@ -9,7 +9,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderBottom: '1px solid #2A363B',
+    borderBottom: '1px solid #5ab0ede9',
+    backgroundColor: '#dcebf5e9',
+    borderRadius: 6,
+    marginTop: 15,
+    marginBottom: 15,
+    boxShadow: '14px 14px 16px 3px rgba(16,14,14,0.75)',
   },
 };
 

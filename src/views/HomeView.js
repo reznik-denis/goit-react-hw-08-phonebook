@@ -1,4 +1,5 @@
 import React from 'react';
+import foto from '../image/123.jpg';
 
 const styles = {
   container: {
@@ -7,21 +8,14 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
+  img: {
+    borderRadius: 15,
   },
 };
 
 const HomeView = () => (
   <div style={styles.container}>
-    <h1 style={styles.title}>
-      Приветственная страница нашего сервиса{' '}
-      <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
-      </span>
-    </h1>
+    <img src={foto} alt={'foto'} width="1200" style={styles.img} />
   </div>
 );
 

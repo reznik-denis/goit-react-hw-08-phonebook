@@ -23,8 +23,8 @@ function App() {
   return (
     !isFetchingCurrentUser && (
       <>
-        <AppBar />
         <Container>
+          <AppBar />
           <Switch>
             <PublicRoute exact path="/">
               <HomeView />

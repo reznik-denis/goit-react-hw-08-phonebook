@@ -7,12 +7,16 @@ const styles = {
   link: {
     display: 'inline-block',
     textDecoration: 'none',
-    padding: 12,
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingLeft: 20,
+    paddingRight: 12,
     fontWeight: 700,
-    color: '#2A363B',
+    color: 'black',
+    fontSize: 18,
   },
   activeLink: {
-    color: '#E84A5F',
+    color: '#052cf0fd',
   },
 };
 
@@ -21,7 +25,7 @@ const Navigation = () => {
   return (
     <nav>
       <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-        Главная
+        Головна
       </NavLink>
       {isLoggedIn && (
         <NavLink
@@ -30,7 +34,7 @@ const Navigation = () => {
           style={styles.link}
           activeStyle={styles.activeLink}
         >
-          Контакты
+          Контакти
         </NavLink>
       )}
     </nav>
