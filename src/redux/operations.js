@@ -14,7 +14,7 @@ export const deleteContact = id => async dispatch => {
 export const fetchContact = () => async dispatch => {
   dispatch(actions.fetchContactRequest());
   try {
-    const data = await axios.get(`/contacts`);
+    const { data } = await axios.get(`/contacts`);
     dispatch(actions.fetchContactSuccess(data));
   } catch (error) {
     dispatch(actions.fetchContactError(error));

@@ -13,14 +13,14 @@ import {
 } from './actions.js';
 
 const items = createReducer([], {
-  [fetchContactSuccess]: (_, { payload }) => [payload],
-  [addContactRequest]: (state, { payload }) => [...state, payload],
+  [fetchContactSuccess]: (_, { payload }) => payload,
+  [addContactSuccess]: (state, { payload }) => [...state, payload],
   [deleteContactSuccess]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
 });
 
 const filter = createReducer('', {
-  [chengeFilter]: (_, { payload }) => [payload],
+  [chengeFilter]: (_, { payload }) => payload,
 });
 
 const loading = createReducer(false, {
