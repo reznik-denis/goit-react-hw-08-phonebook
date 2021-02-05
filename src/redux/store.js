@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import reducers from './contacts/redussers';
+import reducers from './redussers';
 import logger from 'redux-logger';
 import {
   persistStore,

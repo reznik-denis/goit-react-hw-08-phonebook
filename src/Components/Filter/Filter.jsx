@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { chengeFilter } from '../redux/contacts/actions';
-import { selectors } from '../redux/contacts';
+import { chengeFilter } from '../../redux/actions';
+import { getFilter } from '../../redux/selectors';
 
 function Filter() {
-  const value = useSelector(selectors.getFilter);
+  const value = useSelector(getFilter);
   const dispatch = useDispatch();
 
   return (
     <label className="labelBlock">
-      Find contacts by name{' '}
+      Пошук контактів по імені{' '}
       <input
         type="text"
         value={value}

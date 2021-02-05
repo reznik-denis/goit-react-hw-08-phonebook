@@ -1,8 +1,6 @@
 import * as actions from './actions';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
-
 export const deleteContact = id => async dispatch => {
   dispatch(actions.deleteContactRequest());
   try {
@@ -29,11 +27,11 @@ export const addContact = (name, number) => async dispatch => {
     number,
   };
 
-  dispatch(actions.formSubmitRequest());
+  dispatch(actions.addContactRequest());
   try {
     const { data } = await axios.post(`/contacts`, contact);
-    dispatch(actions.formSubmitSuccess(data));
+    dispatch(actions.addContactSuccess(data));
   } catch (error) {
-    dispatch(actions.formSubmitError(error));
+    dispatch(actions.addContactError(error));
   }
 };

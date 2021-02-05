@@ -1,19 +1,27 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { operations, selectors } from '../redux/contacts';
+import { getContacts } from '../../redux/selectors';
+import { addContact } from '../../redux/operations';
 
 function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const contactsItems = useSelector(selectors.getContacts);
+  const contactsItems = useSelector(getContacts);
   const dispatch = useDispatch();
 
-  const handleChangeName = event => {
-    setName(event.currentTarget.value);
-  };
+  const handleChange = event => {
+    const { name, value } = event.currentTarget;
 
-  const handleChangeNumber = event => {
-    setNumber(event.currentTarget.value);
+    switch (name) {
+      case 'name':
+        setName(value);
+        break;
+      case 'number':
+        setNumber(value);
+        break;
+      default:
+        return;
+    }
   };
 
   const repeatName = name => {
@@ -23,20 +31,20 @@ function ContactForm() {
     );
   };
 
-  const repeatPhone = number => {
+  const repeatNumber = number => {
     return contactsItems.find(contact => contact.number === number);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
     if (repeatName(name)) {
-      alert(`${name} is already added.`);
-    } else if (repeatPhone(number)) {
-      alert(`${number} is already added.`);
+      alert(`${name}. Таке ім'я вже існує`);
+    } else if (repeatNumber(number)) {
+      alert(`${number}. Такий номер вже існує`);
     } else if (name.trim() === '' || number.trim() === '') {
-      alert('All of inputs must be not empty');
+      alert('Заповніть будь-ласка всі поля форми');
     } else {
-      dispatch(operations.addContact(name, number));
+      dispatch(addContact(name, number));
     }
     reset();
   };
@@ -53,7 +61,7 @@ function ContactForm() {
         <input
           type="text"
           value={name}
-          onChange={handleChangeName}
+          onChange={handleChange}
           name="name"
           className="inputStyles"
         />
@@ -63,7 +71,7 @@ function ContactForm() {
         <input
           type="tel"
           value={number}
-          onChange={handleChangeNumber}
+          onChange={handleChange}
           name="number"
           className="inputStyles"
         />

@@ -2,9 +2,9 @@ import { createAction } from '@reduxjs/toolkit';
 
 export const chengeFilter = createAction('contact/ChengeFilter');
 
-export const formSubmitRequest = createAction('contact/formSubmitRequest');
-export const formSubmitSuccess = createAction('contact/formSubmitSuccess');
-export const formSubmitError = createAction('contact/formSubmitError');
+export const addContactRequest = createAction('contact/addContactRequest');
+export const addContactSuccess = createAction('contact/addContactSuccess');
+export const addContactError = createAction('contact/addContactError');
 
 export const deleteContactRequest = createAction(
   'contact/deleteContactRequest',

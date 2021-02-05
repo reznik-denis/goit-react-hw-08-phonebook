@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { operations } from '../redux/contacts';
+import * as operations from '../../redux/operations';
 
 function Button({ id }) {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
-import ContactList from '../Components/ContactList';
-import ContactForm from '../Components/ContactForm';
+import ContactList from '../Components/ContactList/ContactList';
+import ContactForm from '../Components/ContactForm/ContactForm';
 import Container from '../Components/container/Container';
-import Filter from '../Components/Filter';
+import Filter from '../Components/Filter/Filter';
 
 function Contacts() {
   return (
