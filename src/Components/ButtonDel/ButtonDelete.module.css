@@ -1,0 +1,21 @@
+.button {
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #4aabf0fd;
+  box-shadow: 6px 2px 16px 2px rgba(16, 14, 14, 0.47);
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #8ff7f0fd;
+  transform: scale(1.1);
+}

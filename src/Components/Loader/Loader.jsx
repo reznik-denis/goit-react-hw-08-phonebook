@@ -9,7 +9,7 @@ const override = css`
 
 function Loader() {
   return (
-    <FadeLoader color={'#4a4a4a'} loading={true} css={override} size={150} />
+    <FadeLoader color={'#4aabf0fd'} loading={true} css={override} size={150} />
   );
 }
 
