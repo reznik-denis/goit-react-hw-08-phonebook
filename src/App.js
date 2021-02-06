@@ -1,8 +1,8 @@
 import './App.css';
 import ContactList from './views/ContactList';
 import HomeView from './views/HomeView';
-import LoginView from './views/LoginView';
-import RegisterView from './views/RegisterView';
+import LoginView from './views/LoginViews/LoginView';
+import RegisterView from './views/ReigsterViews/RegisterView';
 import { Switch } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

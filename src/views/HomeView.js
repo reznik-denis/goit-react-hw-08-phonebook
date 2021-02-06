@@ -15,7 +15,7 @@ const styles = {
 
 const HomeView = () => (
   <div style={styles.container}>
-    <img src={foto} alt={'foto'} width="1200" style={styles.img} />
+    <img src={foto} alt={'foto'} width="1000" style={styles.img} />
   </div>
 );
 
